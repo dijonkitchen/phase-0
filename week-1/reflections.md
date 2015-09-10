@@ -77,3 +77,17 @@ Can you remember what each of the following does of the top of your head? Write 
 
 
 # Forking and Cloning Reflection
+
+If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+
+Create an account on GitHub.com
+Create a new Repository on the top left under the '+' sign
+Go to another person's repository and click the 'Fork' button on the top right
+On the bottom right of your newly forked repository, copy the HTTPS clone URL
+Open your terminal and type in "git clone ", paste the clone URL you copied, press enter
+You would want to fork a repository so that you can work off of someone else's work that's already been established. There's no need to create a new one and start from scratch. Additionally, since the repositories are linked by the fork, you can be notified of changes to the original's source code.
+
+
+What struggles did you have setting up git and GitHub? What did you learn in the process?
+
+Setting up git and GitHub was fairly painless for me since I already had a GitHub account. What I did learn was more of the command line and using it to navigate, clone, commit, pull requests, and push. Making changes to a file, then committing them, and adding descriptions was new to me. Having used the web and application interface previously, forcing myself to just use the terminal will take a little work, but I'm confident I'll get used to it since developers need to use git and GitHub all the time.
