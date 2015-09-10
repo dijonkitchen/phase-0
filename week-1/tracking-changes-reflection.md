@@ -16,9 +16,9 @@ HEAD^ is the second most recent commit. HEAD is the most recent and HEAD-3, -n, 
 
 # What are the 3 stages of a git change and how do you move a file from one stage to the other?
 
-1. Include a file in Git with git add
-2. Commit a file with git commit
-3. Merge changes with git merge (on feature branch) and then a pull request (on master branch) and finally merging the pull request
+1. Tracking files that are untracked with git add
+2. Committing uncommited files with git commit
+3. Merging branches into the master branch with git merge (on feature branch) and then a pull request (on master branch) and finally merging the pull request
 
 # Write a handy cheatsheet of the commands you need to commit your changes?
 
