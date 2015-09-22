@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dissecting HTML</title>
+  </head>
+  <body>
+    <section>
+      <h1>Software Versioning</h1>
+      <h2>September 10, 2015</h2>
+
+      <p>My week at Dev Bootcamp&#39;s Phase 0 has begun! Part of it has been to utilize the command line to make a blog on GitHub and write some technical posts. This post will be on versioning software with Git!</p>
+
+      <p>I&#39;ve been a huge fan of versioning for many years now. It all started when I was still in the business world and everyone traded documents and spreadsheets via email or at most on the network. One quarter, we had a major deliverable with an old spreadsheet that had a ton of links to other files and was handled by several people. Unfortunately, this quarter, it got corrupted one way or another... and we didn&#39;t version!</p>
+
+      <p>We learned our lesson from that point forward. It was no fun redoing all our changes on an old file with changes all over the place. From that point on my manager and I always insisted that every file be versioned, especially if we were working with others. We did it in a fairly simple fashion by just adding V1, V2, V3, etc. after it. It allowed us to go back to a previous version if something went wrong. This can work for software too, but it&#39;s not as elegant as Git.</p>
+
+      <p><a href="https://en.wikipedia.org/wiki/Git_(software)">Git</a> is a distributed versioning system. Unlike our simple version control, where only one person would be able to edit a file at a time, Git allows multiple people to make new branches to edit and can merge while checking for conflicts.</p>
+
+      <p>This is very powerful because it can allow people in different locations all over the world to make changes to the same master file. If they happen to be working on the same portion of the file, Git will tell them there are conflicts when they both try to save. If there aren&#39;t any conflicts, their changes can be merged into the master file. This is very efficient, particularly for large projects. Imagine working on a large thesis with many writers; if they could all work on different parts and then have them combined, you&#39;ve distributed the work and can complete it many times faster.</p>
+
+      <p>One key thing with lots of edits is to keep them small and do them often. Much like save points in a game, if you have a lot of checkpoints to go back to, you can easily determine where errors started and go back to the best spot. Git calls these commits.</p>
+
+      <p>Now you might be wondering, it&#39;s great to be able to have many people at one organization make edits, but what if you work elsewhere, possibly on a different network? That&#39;s where <a href="https://github.com/">GitHub</a> comes in. GitHub allows people to collaborate online! So whether you work at your favorite tech company or not, there are a <a href="https://github.com/trending?since=monthly">ton of respositories</a> you can help improve.</p>
+
+      <p>By default, repositories on GitHub are public and thus anyone can look at them and make new versions (fork in Git speak). Additionally, because of this, GitHub is a great place for <a href="https://en.wikipedia.org/wiki/Open-source_software">open source software</a>.</p>
+
+      <p>So go forth, check out GitHub, and contribute to some cool projects!</p>
+    </section>
+  </body>
+
+  <!--
+  What HTML5 tags have you used in this challenge and continue to return to often? Why?
+
+  The HTML5 doctype, html, head, body, title, section, h, and p tags. Most of these are the basic structure of an html document. Of particular note is the section tag which is newer and denotes different sections of the file. This is useful for people that are viewing the page with accessibility issues.
+
+  How do elements get laid out on a page? What is the order the browser uses to display elements?
+
+  Elements get laid out from top to bottom with nested tags after their parent tags. Parent tags nest tags within them so you can expand or collapse them in developer tools.
+
+  What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date? What about research some shortcuts that already exist?
+
+  I learned that you can make custom snippets in the editor. I think will definitely use this tool to make more snippets in the future since it is an efficient way to get boilerplate code. Another shortcut that exist is for Lorem ipsum which displays some filler text for paragraphs in a wireframe. 
+
+  -->
+
+</html>
