@@ -1,0 +1,43 @@
+/*
+This is a catch-all for debugging
+* {
+  border:1px solid red;
+}
+*/
+
+/* Main Atomic CSS */
+.navy {color: #000080}
+.bg-white {background-color: #ffffff}
+.bg-black {background-color: black}
+.raleway {font-family: Raleway;}
+
+.sm-pic-height {height: 100px}
+.pic-auto-width {width: auto;}
+
+.bg-gecko {background-image: url("../imgs/gecko.png");}
+
+.bold{font-weight: bold;}
+.ctr-text{text-align: center;}
+
+.no-margin {margin: 0.0em;}
+.md-margin {margin: 1.5em;}
+
+.sm-font {font-size: 0.6em;}
+.md-font {font-size: 0.8em;}
+.std-font {font-size: 1.0em;}
+.lg-font {font-size: 2.0em;}
+
+.sm-height {height: 0.06em}
+
+.inl-bl {display: inline-block;}
+.fl-l {float: left;}
+.fl-r {float: right;}
+.half-width {width: 50%}
+
+.all-clear {clear: both;}
+
+/* Tag styles for brevity */
+
+li {margin: 2.0em;}
+a {color: #800080}
+a:visited {color: #ff0000}
