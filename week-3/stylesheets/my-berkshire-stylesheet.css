@@ -41,3 +41,26 @@ This is a catch-all for debugging
 li {margin: 2.0em;}
 a {color: #800080}
 a:visited {color: #ff0000}
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+It's important to get the link right so that when you make changes to the CSS, it'll change your website as well.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+We used trial and error to get our positioning right. Utilizing Atomic CSS helps since it's reusable and you can change one thing at a time.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+We used font-size in ems, color and background-color in hexadecimal, and more as seen above.
+
+Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+
+We utilized classes exclusively so that they were descriptive and modular. IDs would have been to specific and unable to use again in a different scenario.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+I think our code utilizes best practices and cleaner code since it uses the newer HTML5 semantic tags and Atomic CSS. The older site hasn't been fundamentally updated in a long time and still uses tables, an older methodology.
+
+*/
