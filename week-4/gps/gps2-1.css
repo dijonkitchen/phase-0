@@ -1,0 +1,25 @@
+header{
+    background-color:orange;
+    margin: 0em;
+    width: 100%;
+}
+.column-1 {
+    background-color:purple;
+    display:inline-block;
+    width:45%;
+    margin: 0em;
+    padding: 0em;
+    border:  0em;
+}
+.column-2 {
+    background-color:purple;
+    display: inline-block;
+    width:45%;
+    margin:0em;
+    padding:0em;
+    border: 0em;
+    float:right;
+}
+footer{
+    background-color:blue;
+}
