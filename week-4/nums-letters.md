@@ -12,16 +12,16 @@ Integer division rounds down when it's not exact. Float division will be exact. 
 
 Hours in a year
 
-'''ruby
+```ruby
 puts 24*365
 8760
-'''
+```
 
 Minutes in a decade
-'''ruby
+```ruby
 puts 60*24*365.25*10
 5259600.0
-'''
+```
 
 ## Reflection
 
