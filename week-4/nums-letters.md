@@ -49,6 +49,8 @@ Local variables are variables in your file. You use them to store values to be u
 
 This challenge was fairly simple since it was a review of what we've already had to cover for Ruby. It was a good refresher of the basics.
 
-![defining-variables](https://github.com/dijonkitchen/phase-0/blob/master/week-4/defining-variables.rb)
-![simple-string](https://github.com/dijonkitchen/phase-0/blob/master/week-4/simple-string.rb)
-![basic-math](https://github.com/dijonkitchen/phase-0/blob/master/week-4/basic-math.rb)
+[defining-variables](https://github.com/dijonkitchen/phase-0/blob/master/week-4/defining-variables.rb)
+
+[simple-string](https://github.com/dijonkitchen/phase-0/blob/master/week-4/simple-string.rb)
+
+[basic-math](https://github.com/dijonkitchen/phase-0/blob/master/week-4/basic-math.rb)
