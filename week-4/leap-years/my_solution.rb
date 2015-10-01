@@ -1,6 +1,6 @@
 # Leap Years
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [Jon Chen with Jack Huang ].
 
 
 # Your Solution Below
