@@ -30,6 +30,6 @@ puts "#{first_name} #{middle_name} #{last_name} is such a lovely name and #{new_
 # What was confusing about this material? What made sense?
 # There was not that was confusing about this material since it was mostly a review. My only hiccup was using puts vs. p since the former only returns nil while the latter returns the value.
 
-https://github.com/dijonkitchen/phase-0/tree/master/week-4/define-method
-https://github.com/dijonkitchen/phase-0/tree/master/week-4/address
-https://github.com/dijonkitchen/phase-0/tree/master/week-4/math
+# https://github.com/dijonkitchen/phase-0/tree/master/week-4/define-method
+# https://github.com/dijonkitchen/phase-0/tree/master/week-4/address
+# https://github.com/dijonkitchen/phase-0/tree/master/week-4/math
