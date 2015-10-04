@@ -1,6 +1,6 @@
 # Factorial
 
-# I worked on this challenge with: Jon Chen and Armani Saldana.
+# Jon Chen and Armani Saldana worked on this challenge.
 
 
 # Your Solution Below
