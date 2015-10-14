@@ -70,7 +70,7 @@ class GuessingGame
   end
 
   def solved?
-    @number == @answer ? true : false
+    @number == @answer
   end
 
 end
@@ -91,6 +91,6 @@ Flow control is checking when something is true or false. It wasn't that complic
 
 Why do you think this code requires you to return symbols? What are the benefits of using symbols?
 
-By using symbols, you know exactly what an object is. There is no confusion over what the state of the object is: correct, high, or low. 
+By using symbols, you know exactly what an object is. There is no confusion over what the state of the object is: correct, high, or low.
 
 =end

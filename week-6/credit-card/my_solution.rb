@@ -93,14 +93,14 @@ end
 =begin
 What was the most difficult part of this challenge for you and your pair?
 
-
+The most difficult part was refactoring for us. It was hard to find a simplier or cleaner solution.
 
 What new methods did you find to help you when you refactored?
 
-
+We found chars to be helpful instead of splitting it the string.
 
 What concepts or learnings were you able to solidify in this challenge?
 
-
+We solidified our understanding of iteration and chaining methods. 
 
 =end
