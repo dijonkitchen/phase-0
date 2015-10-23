@@ -211,7 +211,8 @@ As a user I want to check if mean is the name of a function.
 // ***********
 assert(
   (mean === 3.857142857142857),
-  'mean should return the average of all elements in an array with an odd length.',
+  'mean should return the average of all elements in an
+array with an odd length.',
   '5. '
 )
 
@@ -241,7 +242,8 @@ As a user I want to check that the mean is 3.857142857142857, the average of an 
 // ***********
 assert(
   (mean === 5.375),
-  'mean should return the average of all elements in an array with an even length.',
+  'mean should return the average of all elements in
+an array with an even length.',
   '6. '
 )
 
