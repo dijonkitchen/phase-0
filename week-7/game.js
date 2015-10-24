@@ -25,17 +25,21 @@ Display winner
 */
 
 // Initial Code
+var blank = '_'
+
 var board = [
-  ['_', '_', '_'],
-  ['_', '_', '_'],
-  ['_', '_', '_']
+  [blank, blank, blank],
+  [blank, blank, blank],
+  [blank, blank, blank]
 ]
 
 var playerO = {
+  name: 'PlayerO',
   marker: 'O'
 }
 
 var playerX = {
+  name: 'PlayerX',
   marker: 'X'
 }
 
@@ -57,16 +61,58 @@ function display () {
 }
 
 function mark (player, row, col) {
-  board[row][col] = player.marker
+  if (board[row][col] === blank) {
+    board[row][col] = player.marker
+    console.log(player.name, 'put an', player.marker, 'on (', row, ',', col, ')')
+  } else {
+    console.log('Try again. That spot is marked already!')
+  }
+}
+
+function winner () {
+  for (var row = 0; row < board.length; row++) {
+    if (board[row][0] === board[row][1] && board[row][1] === board[row][2]) {
+      return board[row][0]
+    }
+  }
+
+  for (var col = 0; col < board.length; col++) {
+    if (board[0][col] === board[1][col] && board[1][col] === board[2][col]) {
+      return board[0][col]
+    }
+  }
+
+  if (board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+    return board[0][0]
+  } else if (board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
+    return board[0][2]
+  }
+
+  return blank
 }
 
 // Driver code
 // board = generateBoard(3)
+do {
+  display()
+  mark(playerO, 1, 1)
+  display()
+  mark(playerX, 0, 0)
+  display()
+  mark(playerO, 1, 0)
+  display()
+  mark(playerX, 1, 2)
+  display()
+  mark(playerO, 0, 1)
+  display()
+  mark(playerX, 2, 2)
+  display()
+  mark(playerO, 2, 1)
+} while (!(winner() !== '_'))
+
 display()
-mark(playerO, 1, 2)
-display()
-mark(playerX, 1, 1)
-display()
+console.log('Player', winner(), 'is the winner!')
+
 // Refactored Code
 
 // Reflection
