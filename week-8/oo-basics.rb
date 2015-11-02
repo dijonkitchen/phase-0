@@ -182,18 +182,22 @@ def linear_search(students, first)
 
 end
 
-def binary_search(data, query)
+def binary_search(data, query, low_index, high_index)
 
-  midpoint = data.size / 2
-
-  if data[midpoint].first_name == query
-    return midpoint
-  elsif midpoint <= 0
+  if low_index > high_index
     return -1
-  elsif query < data[midpoint].first_name
-    return binary_search(data[0...midpoint], query)
-  elsif query > data[midpoint].first_name
-    return binary_search(data[midpoint+1...data.size], query)
+  elsif low_index == high_index
+    data[low_index].first_name == query ? low_index : -1
+  else
+    midpoint = (high_index - low_index) / 2 + low_index
+
+    if data[midpoint].first_name == query
+      return midpoint
+    elsif data[midpoint].first_name < query
+      binary_search(data, query, midpoint + 1, high_index)
+    else
+      binary_search(data, query, low_index, midpoint - 1)
+    end
   end
 
 end
@@ -233,7 +237,13 @@ students.sort_by! {
   student.first_name
 }
 
-p binary_search(students, "Jon") == 4
-p binary_search(students, "NOT A STUDENT") == -1
+p binary_search(students, "Alex", 0, students.size - 1) == 0
+p binary_search(students, "Carmen", 0, students.size - 1) == 1
+p binary_search(students, "Conway", 0, students.size - 1) == 2
+p binary_search(students, "Jim", 0, students.size - 1) == 3
+p binary_search(students, "Jon", 0, students.size - 1) == 4
+p binary_search(students, "NOT A STUDENT", 0, students.size - 1) == -1
 
 # Reflection
+
+# In ruby_review.rb file
