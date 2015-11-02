@@ -42,6 +42,90 @@ DEFINE a binary search method
 
 =end
 # Initial Solution
+#
+# class Student
+#   attr_accessor :scores, :first_name
+#
+#   def initialize(first_name, scores)   #Use named arguments!
+#     #your code here
+#     @first_name = first_name
+#     @scores = scores
+#   end
+#
+#   def average
+#
+#     total = 0
+#
+#     @scores.each {
+#       |score|
+#       total += score
+#     }
+#
+#     total / @scores.size
+#
+#   end
+#
+#   def letter_grade
+#
+#     if average >= 90
+#       'A'
+#     elsif average >= 80
+#       'B'
+#     elsif average >= 70
+#       'C'
+#     elsif average >= 60
+#       'D'
+#     else
+#       'F'
+#     end
+#
+#   end
+#
+# end
+#
+# def linear_search(students, first)
+#
+#   students.each_index {
+#
+#     |i|
+#
+#     if students[i].first_name == first
+#       return i
+#     else
+#       return -1
+#     end
+#   }
+#
+# end
+#
+# def binary_search(students, first)
+#
+#   midpoint = (students.size - 1) / 2
+#
+#   if midpoint <= 0
+#     if students[midpoint].first_name == first
+#       return midpoint
+#     else
+#       return -1
+#     end
+#   elsif first < students[midpoint].first_name
+#     return binary_search(students[0...midpoint], first)
+#   elsif first > students[midpoint].first_name
+#     return binary_search(students[midpoint+1...students.size], first)
+#   end
+#
+# end
+#
+#
+# alex = Student.new("Alex", [100,100,100,0,100])
+# carmen = Student.new("Carmen", [100,100,100,100,100])
+# jon = Student.new("Jon", [80,85,90,95,87])
+# jim = Student.new("Jim", [54,77,98,23,12])
+# conway = Student.new("Conway", [98,23,56,20,100])
+#
+# students = [alex, carmen, jon, jim, conway]
+
+# Refactored Solution
 
 class Student
   attr_accessor :scores, :first_name
@@ -98,38 +182,30 @@ def linear_search(students, first)
 
 end
 
-def binary_search(students, first)
+def binary_search(data, query)
 
-  midpoint = students.size / 2
+  midpoint = data.size / 2
 
-  if midpoint == 0
-    if students[midpoint].first_name == first
-      return midpoint
-    else
-      return -1
-    end
-  elsif first < students[midpoint].first_name
-    return binary_search(students[0...midpoint], first)
-  elsif first > students[midpoint].first_name
-    return binary_search(students[midpoint+1..students.size], first)
+  if data[midpoint].first_name == query
+    return midpoint
+  elsif midpoint <= 0
+    return -1
+  elsif query < data[midpoint].first_name
+    return binary_search(data[0...midpoint], query)
+  elsif query > data[midpoint].first_name
+    return binary_search(data[midpoint+1...data.size], query)
   end
 
 end
 
 
-alex = Student.new("Alex", [100,100,100,0,100])
-carmen = Student.new("Carmen", [100,100,100,100,100])
-jon = Student.new("Jon", [80,85,90,95,87])
-jim = Student.new("Jim", [54,77,98,23,12])
-conway = Student.new("Conway", [98,23,56,20,100])
+alex = Student.new("Alex", [100, 100, 100, 0, 100])
+carmen = Student.new("Carmen", [100, 100, 100, 100, 100])
+jon = Student.new("Jon", [80, 85, 90, 95, 87])
+jim = Student.new("Jim", [54, 77, 98, 23, 12])
+conway = Student.new("Conway", [98, 23, 56, 20, 100])
 
 students = [alex, carmen, jon, jim, conway]
-
-# Refactored Solution
-
-
-
-
 
 
 # DRIVER TESTS GO BELOW THIS LINE
@@ -151,12 +227,13 @@ p students[0].letter_grade == 'B'
 p linear_search(students, "Alex") == 0
 p linear_search(students, "NOT A STUDENT") == -1
 
+# Sort required for Binary Search
 students.sort_by! {
   |student|
   student.first_name
 }
 
-p binary_search(students, "Alex") == 0
+p binary_search(students, "Jon") == 4
 p binary_search(students, "NOT A STUDENT") == -1
 
 # Reflection
