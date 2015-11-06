@@ -169,7 +169,7 @@ console.log('Alex', binarySearch(students, 'Alex', 0, students.length - 1) === 0
 console.log('Carmen', binarySearch(students, 'Carmen', 0, students.length - 1) === 1)
 console.log('Conway', binarySearch(students, 'Conway', 0, students.length - 1) === 2)
 console.log('Jim', binarySearch(students, 'Jim', 0, students.length - 1) === 3)
-console.log('Jon', binarySearch(students, 'Jon', 0, students.length - 1) === 4)
+console.log('Jon', binarySearch(students,'Jon', 0, students.length - 1) === 4)
 console.log('NOT A STUDENT', binarySearch(students, 'NOT A STUDENT', 0, students.length - 1) === -1)
 
 // Reflection
