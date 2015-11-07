@@ -53,6 +53,81 @@ to find a student
 
 // Initial Solution
 
+// function Student (first, studScores) {
+//   this.firstName = first
+//   this.scores = studScores
+//
+//   this.average = function () {
+//     var total = 0
+//     for (var index = 0; index < this.scores.length; index++) {
+//       total += this.scores[index]
+//     }
+//     return total / this.scores.length
+//   }
+//
+//   this.letterGrade = function () {
+//     if (this.average() >= 90) {
+//       return 'A'
+//     } else if (this.average() >= 80) {
+//       return 'B'
+//     } else if (this.average() >= 70) {
+//       return 'C'
+//     } else if (this.average() >= 60) {
+//       return 'D'
+//     } else {
+//       return 'F'
+//     }
+//   }
+// }
+//
+// var alex = new Student('Alex', [100, 100, 100, 0, 100])
+// var carmen = new Student('Carmen', [100, 100, 100, 100, 100])
+// var jon = new Student('Jon', [80, 85, 90, 95, 87])
+// var jim = new Student('Jim', [54, 77, 98, 23, 12])
+// var conway = new Student('Conway', [98, 23, 56, 20, 100])
+//
+// var students = [
+//   alex,
+//   carmen,
+//   jon,
+//   jim,
+//   conway
+// ]
+//
+// function linearSearch (arrayOfObjects, queryOfFirstName) {
+//   for (var index = 0; index < arrayOfObjects.length; index++) {
+//     if (arrayOfObjects[index].firstName === queryOfFirstName) {
+//       return index
+//     } else {
+//       return -1
+//     }
+//   }
+// }
+//
+// function binarySearch (arrayOfObjects, queryOfFirstName, lowIndex, highIndex) {
+//   if (lowIndex > highIndex) {
+//     return -1
+//   } else {
+//     var midpoint = Math.floor((highIndex + lowIndex) / 2)
+//     // console.log(lowIndex, midpoint, highIndex)
+//     // console.log('found:', arrayOfObjects[midpoint].firstName)
+//     // console.log('query:', queryOfFirstName)
+//     // console.log(queryOfFirstName === arrayOfObjects[midpoint].firstName)
+//     if (queryOfFirstName === arrayOfObjects[midpoint].firstName) {
+//       // console.log(midpoint)
+//       return midpoint
+//     } else if (queryOfFirstName < arrayOfObjects[midpoint].firstName) {
+//       return binarySearch(arrayOfObjects, queryOfFirstName, lowIndex, midpoint)
+//     } else if (queryOfFirstName > arrayOfObjects[midpoint].firstName) {
+//       return binarySearch(arrayOfObjects, queryOfFirstName, midpoint + 1, highIndex)
+//     } else {
+//       return -1
+//     }
+//   }
+// }
+
+// Refactored Solution
+
 function Student (first, studScores) {
   this.firstName = first
   this.scores = studScores
@@ -107,32 +182,20 @@ function linearSearch (arrayOfObjects, queryOfFirstName) {
 function binarySearch (arrayOfObjects, queryOfFirstName, lowIndex, highIndex) {
   if (lowIndex > highIndex) {
     return -1
-  } if (lowIndex === highIndex) {
-    // console.log('low high check', lowIndex === highIndex)
-    if (arrayOfObjects[lowIndex].firstName === queryOfFirstName) {
-      // console.log(lowIndex)
-      return lowIndex
+  } else {
+    var midpoint = Math.floor((highIndex + lowIndex) / 2)
+
+    if (queryOfFirstName === arrayOfObjects[midpoint].firstName) {
+      return midpoint
+    } else if (queryOfFirstName < arrayOfObjects[midpoint].firstName) {
+      return binarySearch(arrayOfObjects, queryOfFirstName, lowIndex, midpoint - 1)
+    } else if (queryOfFirstName > arrayOfObjects[midpoint].firstName) {
+      return binarySearch(arrayOfObjects, queryOfFirstName, midpoint + 1, highIndex)
     } else {
       return -1
     }
-  } else {
-    var midpoint = Math.floor((highIndex - lowIndex) / 2 + lowIndex)
-    // console.log(lowIndex, midpoint, highIndex)
-    // console.log('found:', arrayOfObjects[midpoint].firstName)
-    // console.log('query:', queryOfFirstName)
-    // console.log(queryOfFirstName === arrayOfObjects[midpoint].firstName)
-    if (queryOfFirstName === arrayOfObjects[midpoint].firstName) {
-      // console.log(midpoint)
-      return midpoint
-    } else if (queryOfFirstName < arrayOfObjects[midpoint].firstName) {
-      binarySearch(arrayOfObjects, queryOfFirstName, lowIndex, midpoint - 1)
-    } else {
-      binarySearch(arrayOfObjects, queryOfFirstName, midpoint + 1, highIndex)
-    }
   }
 }
-
-// Refactored Solution
 
 // DRIVER TESTS GO BELOW THIS LINE
 // Initial Tests:
@@ -156,7 +219,7 @@ console.log(linearSearch(students, 'NOT A STUDENT') === -1)
 students.sort(function (a, b) {
   if (a.firstName < b.firstName) {
     return -1
-  } if (a.firstName > b.firstName) {
+  } else if (a.firstName > b.firstName) {
     return 1
   } else {
     return 0
@@ -173,3 +236,21 @@ console.log('Jon', binarySearch(students, 'Jon', 0, students.length - 1) === 4)
 console.log('NOT A STUDENT', binarySearch(students, 'NOT A STUDENT', 0, students.length - 1) === -1)
 
 // Reflection
+/*
+What concepts did you solidify in working on this challenge?
+
+JS prototypes, prototype methods, recursion, sorting prototypes
+
+What was the most difficult part of this challenge?
+
+I had most of the logic right since I did this challenge in Ruby, but the JS syntax and requirements were different. Eventually I figured out that I need to RETURN the binarySearch functions for it work properly.
+
+Did you solve the problem in a new way this time?
+
+In general the same methodology but a little cleaner in the initial solution since I had already refactored in Ruby.
+
+Was your pseudocode different from the Ruby version? What was the same and what was different?
+
+A little since I learned a better methodology having refactored the Ruby solution. This version was also a bit more detailed since I was trying to work on my pseudocode and breaking it down into smaller pieces.
+
+*/
